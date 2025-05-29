@@ -76,52 +76,52 @@ const Hero = () => {
           <HoverIcon
             Icon={FaGithub}
             label="GitHub"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={FaNodeJs}
             label="Node.js"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={FaReact}
             label="React"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={IoLogoJavascript}
             label="JavaScript"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={RiNextjsLine}
             label="Next.js"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={SiMongodb}
             label="MongoDB"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={SiPostman}
             label="Postman"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={SiPrisma}
             label="Prisma"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={SiTailwindcss}
             label="Tailwind CSS"
-            onHoverChange={setIconHovered}
+            
           />
           <HoverIcon
             Icon={TbBrandFramerMotion}
             label="Framer Motion"
-            onHoverChange={setIconHovered}
+            
           />
         </div>
       </div>

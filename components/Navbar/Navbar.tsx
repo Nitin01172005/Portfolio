@@ -35,6 +35,7 @@ const Navbar = () => {
       className="fixed left-1/2 transform -translate-x-1/2 text-white z-50 sm:text-4xl md:text-2xl pt-4 items-center rounded-full overflow-hidden"
       style={{
         boxShadow: scrolled ? "var(--shadow-input)" : "none",
+
         // backgroundColor: scrolled ? "gray" : "none",
         background: scrolled
           ? "linear-gradient( 200deg ,#bababa,#000000)"
