@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 
 import { HoverIcon } from "./HoverIcon";
-import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -22,7 +21,6 @@ import { MdOutlineDoubleArrow } from "react-icons/md";
 
 const Hero = () => {
   const router = useRouter();
-   const [ setIconHovered] = useState(false);
 
   return (
     <div className="py-45 px-12 ">
