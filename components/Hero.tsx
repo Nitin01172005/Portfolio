@@ -22,7 +22,7 @@ import { MdOutlineDoubleArrow } from "react-icons/md";
 
 const Hero = () => {
   const router = useRouter();
-   const [iconHovered, setIconHovered] = useState(false);
+   const [ setIconHovered] = useState(false);
 
   return (
     <div className="py-45 px-12 ">
@@ -43,7 +43,6 @@ const Hero = () => {
         </div>
         <motion.div
           className="z-10 relative border rounded-2xl border-neutral-500"
-          initial={{ opacity: 0.5, filter: "blur(6px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{
             duration: 0.3,

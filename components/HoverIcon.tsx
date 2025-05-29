@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function HoverIcon({ Icon, label, onHoverChange }) {
+export function HoverIcon({ Icon, label }) {
   const [hovered, setHovered] = useState(false);
 
 
