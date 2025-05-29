@@ -33,7 +33,7 @@ const Hero = () => {
             </p>
             <p className="text-neutral-400 pt-2 text-sm mr-10">
               Passionate about creating dynamic websites with blended designs. I
-              try give scalable and intersting web solutions. <br />
+              try give scalable and interesting web solutions. <br />
               One who like challenges and create more beautiful websites with
               amazing designs.
             </p>
