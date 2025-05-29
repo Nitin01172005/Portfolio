@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
@@ -13,7 +14,8 @@ import {
 } from "motion/react";
 
 const Navbar = () => {
- 
+
+  const router = useRouter();
 
   const { scrollY } = useScroll();
 
@@ -50,7 +52,10 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between w-full px-10">
         <div className="flex flex-col gap-2">
-          <p className="font-bold text-neutral-200">Nit Alorik</p>
+          <button className="cursor-pointer" onClick={() => router.push("/")}>
+            <p className="font-bold text-neutral-200">Nit Alorik</p>
+          </button>
+          
           <p className="text-[10px]  text-neutral-400">Software Developer</p>
         </div>
         <div className="flex items-center gap-5 justify-between">
