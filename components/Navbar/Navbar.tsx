@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -16,9 +14,6 @@ import {
 
 const Navbar = () => {
  
-
-
-  const [hovered, setHovered] = useState<number | null>(null);
 
   const { scrollY } = useScroll();
 

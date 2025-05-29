@@ -5,7 +5,7 @@ import { HoverIcon } from "./HoverIcon";
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";

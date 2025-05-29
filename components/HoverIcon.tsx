@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function HoverIcon({ Icon, label, onHoverChange }) {
   const [hovered, setHovered] = useState(false);
-  const [iconHovered, setIconHovered] = useState(false);
+
 
 
   // approximate widths, adjust as needed

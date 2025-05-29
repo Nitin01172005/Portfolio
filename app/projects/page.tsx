@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import {AnimatePresence,  motion } from "motion/react";
+import { motion } from "motion/react";
 
 import { FaGithub } from "react-icons/fa6";
 
 import { BsGlobe } from "react-icons/bs";
-import { MdOutlineDoubleArrow } from "react-icons/md";
+
 
 
 const page = () => {
