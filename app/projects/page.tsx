@@ -17,7 +17,7 @@ interface BadgeProps {
 
 const page = () => {
   return (
-    <div className="pt-48 px-4">
+    <div className="pt-24 sm:pt-32 md:pt-48 px-4">
       <div className="mt-13 py-4 border rounded-2xl text-neutral-400 border-neutral-600">
         <p className="text-neutral-400 px-6 font-medium text-lg">Projects</p>
 
@@ -91,7 +91,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <div className="w-full md:w-[48%] lg:w-[32%] bg-neutral-800 border border-neutral-600 rounded-xl overflow-hidden flex flex-col h-auto">
-      <div className="relative h-[220px] sm:h-[280px] md:h-[300px] w-full">
+      <div className="relative h-[180px] sm:h-[220px] md:h-[280px] w-full">
         <Image
           src={image}
           alt={title}
@@ -104,15 +104,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <span className="text-xl font-medium text-neutral-100">{title}</span>
         <div className="flex gap-3">
           <a href={liveLink} target="_blank" rel="noopener noreferrer">
-            <BsGlobe className="text-white hover:scale-105 transition-transform" size={20} />
+            <BsGlobe
+              className="text-white hover:scale-105 transition-transform"
+              size={20}
+            />
           </a>
           <a href={codeLink} target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-white hover:scale-105 transition-transform" size={20} />
+            <FaGithub
+              className="text-white hover:scale-105 transition-transform"
+              size={20}
+            />
           </a>
         </div>
       </div>
 
-      <p className="text-[12px] font-medium text-neutral-300 px-5 pt-2">{description}</p>
+      <p className="text-[12px] font-medium text-neutral-300 px-5 pt-2">
+        {description}
+      </p>
 
       <div className="flex gap-2 flex-wrap px-5 py-3">
         <Badge>React.js</Badge>

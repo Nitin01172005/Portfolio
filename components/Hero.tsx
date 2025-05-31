@@ -58,13 +58,15 @@ const Hero = () => {
           </div>
           <hr className="absolute mx-2 left-0 right-0 top-9 h-px bg-neutral-300 border-0 z-10" />
           <div className="overflow-hidden rounded-2xl">
-            <Image
-              src="/map.png"
-              className="z-10 object-cover rounded-2xl transition-transform duration-900 ease-in-out hover:scale-150 "
-              height={100}
-              width={200}
-              alt="maps"
-            ></Image>
+            <div className="w-full sm:w-[200px] md:w-[300px] lg:w-[200px]">
+              <Image
+                src="/map.png"
+                className="z-10 object-cover rounded-2xl transition-transform duration-900 ease-in-out hover:scale-150 "
+                height={200}
+                width={400}
+                alt="maps"
+              ></Image>
+            </div>
           </div>
         </motion.div>
       </div>

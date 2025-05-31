@@ -17,8 +17,9 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
 
-  const y = useTransform(scrollY, [0, 100], [0, 10]);
-  const width = useTransform(scrollY, [0, 100], ["100%", "85%"]);
+  // Scroll effects
+  const y = useTransform(scrollY, [0, 100], [0, -10]);
+  const width = useTransform(scrollY, [0, 100], ["100%", "90%"]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20);
@@ -26,33 +27,65 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed left-1/2 transform -translate-x-1/2 z-50 text-white rounded-full overflow-hidden"
+      layout
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 text-white overflow-hidden backdrop-blur-md transition-all duration-500 ${
+        scrolled ? "rounded-full shadow-xl" : "rounded-none"
+      }`}
       style={{
-        boxShadow: scrolled ? "var(--shadow-input)" : "none",
-        background: scrolled
-          ? "linear-gradient(200deg, #bababa, #000000)"
-          : "none",
         y,
         width,
+        background: scrolled
+          ? "linear-gradient(200deg, #bababa, #000000)"
+          : "transparent",
+        boxShadow: scrolled ? "var(--shadow-input)" : "none",
       }}
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className="flex flex-col sm:flex-row items-center justify-between w-full px-4 sm:px-6 md:px-10 py-2 sm:py-4 gap-2 sm:gap-0">
-        <div className="flex flex-col text-center sm:text-left">
+      {/* Container */}
+      <motion.div
+        layout
+        className={`flex ${
+          scrolled
+            ? "flex-col items-center gap-2"
+            : "flex-col sm:flex-row items-center justify-between gap-0"
+        } w-full px-4 sm:px-6 md:px-10 py-2 sm:py-4`}
+      >
+        {/* Name + Subtitle */}
+        <motion.div
+          layout
+          className={`flex flex-col ${
+            scrolled ? "items-center" : "sm:items-start"
+          }`}
+        >
           <button className="cursor-pointer" onClick={() => router.push("/")}>
-            <p className="font-bold text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl">
+            <motion.p
+              layout
+              className={`font-bold text-neutral-200 ${
+                scrolled
+                  ? "text-lg sm:text-xl"
+                  : "text-sm sm:text-base md:text-lg lg:text-xl"
+              }`}
+            >
               Nit Alorik
-            </p>
+            </motion.p>
           </button>
-          <p className="text-[10px] ml-5 sm:text-xs text-neutral-400">
+          <motion.p
+            layout
+            className={`text-[10px] sm:text-xs text-neutral-400 ${
+              scrolled ? "mt-1 text-center" : "ml-5 sm:ml-0"
+            }`}
+          >
             Software Developer
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 justify-center">
+        {/* Social Icons */}
+        <motion.div
+          layout
+          className={`flex items-center gap-3 sm:gap-4 md:gap-5 ${
+            scrolled ? "mt-2" : "justify-center"
+          }`}
+        >
           <a
             href="mailto:nitinkirola1701@gmail.com"
             target="_blank"
@@ -93,12 +126,13 @@ const Navbar = () => {
               size={18}
             />
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div>
+      {/* Optional: Bottom border */}
+      <motion.div layout>
         <hr className="h-px mt-2 sm:mt-4 bg-gray-200 border-0" />
-      </div>
+      </motion.div>
     </motion.nav>
   );
 };
