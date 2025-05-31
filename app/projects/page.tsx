@@ -3,10 +3,16 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
+import { ReactNode } from "react";
+
+
+
 import { FaGithub } from "react-icons/fa6";
 
 import { BsGlobe } from "react-icons/bs";
-
+interface BadgeProps {
+  children: ReactNode;
+}
 
 
 const page = () => {
@@ -117,11 +123,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   );
 };
 
-const Badge = ({ children }) => (
+const Badge: React.FC<BadgeProps> = ({ children }) => (
   <span className="text-[10px] border rounded bg-neutral-600 text-neutral-200 px-2 py-0.5 border-neutral-600">
     {children}
   </span>
 );
+
 
 
 
