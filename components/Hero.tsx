@@ -23,22 +23,24 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <div className="py-45 px-12 ">
-      <div className="flex gap-15 ">
-        <div className=" py-4 border rounded-2xl border-neutral-600 bg-neutral-800">
-          <div className=" ml-10 ">
-            <p className="text-neutral-400 font-medium">About</p>
-            <p className="text-neutral-200 text-xl pt-4 font-medium items-center">
-              I am Software developer specialize in front-end more.
-            </p>
-            <p className="text-neutral-400 pt-2 text-sm mr-10">
-              Passionate about creating dynamic websites with blended designs. I
-              try give scalable and interesting web solutions. <br />
-              One who like challenges and create more beautiful websites with
-              amazing designs.
-            </p>
-          </div>
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 pt-[200px] space-y-10">
+      {/* About + Location */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        {/* About Section */}
+        <div className="p-6 border rounded-2xl border-neutral-600 bg-neutral-800 flex-1">
+          <p className="text-neutral-400 font-medium">About</p>
+          <p className="text-neutral-200 text-lg sm:text-xl pt-4 font-medium">
+            I am Software developer specialize in front-end more.
+          </p>
+          <p className="text-neutral-400 pt-2 text-sm">
+            Passionate about creating dynamic websites with blended designs. I
+            try give scalable and interesting web solutions. <br />
+            One who like challenges and create more beautiful websites with
+            amazing designs.
+          </p>
         </div>
+
+        {/* Location Map */}
         <motion.div
           className="z-10 relative border rounded-2xl border-neutral-500"
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
@@ -67,190 +69,125 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="mt-13 py-4 border rounded-2xl text-neutral-400 border-neutral-600 transition-transform duration-300 ease-in-out w-[1060px]">
-        <p className="text-neutral-400 pb-2 font-medium ml-10 ">Skills</p>
-        <hr className="ml-10 h-px bg-neutral-300 border-0 z-10 w-[950px] transition-transform duration-300 ease-in-out " />
-        <div className="flex gap-12 pt-7 ml-10 transition-transform duration-300 ease-in-out">
-          <HoverIcon
-            Icon={FaGithub}
-            label="GitHub"
-            
-          />
-          <HoverIcon
-            Icon={FaNodeJs}
-            label="Node.js"
-            
-          />
-          <HoverIcon
-            Icon={FaReact}
-            label="React"
-            
-          />
-          <HoverIcon
-            Icon={IoLogoJavascript}
-            label="JavaScript"
-            
-          />
-          <HoverIcon
-            Icon={RiNextjsLine}
-            label="Next.js"
-            
-          />
-          <HoverIcon
-            Icon={SiMongodb}
-            label="MongoDB"
-            
-          />
-          <HoverIcon
-            Icon={SiPostman}
-            label="Postman"
-            
-          />
-          <HoverIcon
-            Icon={SiPrisma}
-            label="Prisma"
-            
-          />
-          <HoverIcon
-            Icon={SiTailwindcss}
-            label="Tailwind CSS"
-            
-          />
-          <HoverIcon
-            Icon={TbBrandFramerMotion}
-            label="Framer Motion"
-            
-          />
+      {/* Skills */}
+      <div className="py-6 border rounded-2xl text-neutral-400 border-neutral-600 transition-transform duration-300 ease-in-out w-full">
+        <p className="text-neutral-400 pb-2 font-medium ml-5 sm:ml-10">
+          Skills
+        </p>
+        <hr className="ml-5 sm:ml-10 h-px bg-neutral-300 border-0 z-10 w-[90%]" />
+        <div className="flex flex-wrap justify-start gap-6 sm:gap-8 pt-7 ml-5 sm:ml-10">
+          <HoverIcon Icon={FaGithub} label="GitHub" />
+          <HoverIcon Icon={FaNodeJs} label="Node.js" />
+          <HoverIcon Icon={FaReact} label="React" />
+          <HoverIcon Icon={IoLogoJavascript} label="JavaScript" />
+          <HoverIcon Icon={RiNextjsLine} label="Next.js" />
+          <HoverIcon Icon={SiMongodb} label="MongoDB" />
+          <HoverIcon Icon={SiPostman} label="Postman" />
+          <HoverIcon Icon={SiPrisma} label="Prisma" />
+          <HoverIcon Icon={SiTailwindcss} label="Tailwind CSS" />
+          <HoverIcon Icon={TbBrandFramerMotion} label="Framer Motion" />
         </div>
       </div>
 
-      <div className=" mt-13 py-4 border mr-15 rounded-2xl  text-neutral-400 border-neutral-600">
-        <p className="text-neutral-400 ml-10 font-medium">Projects</p>
-        <hr className="mx-4 h-px bg-neutral-300 border-0 z-10 ml-10 my-2 mr-4" />
-        <div className="flex gap-15 items-center justify-between mx-10 my-4">
-          <div className=" overflow-hidden border h-[430px] w-[500px]  bg-neutral-800 border-neutral-600 rounded-xl ">
-            <div className=" overflow-hidden w-[500px] h-[300px]">
-              <Image
-                src="/elect.png"
-                className="z-10 object-cover w-full h-full  rounded-tl-xl rounded-tr-xl transition-transform duration-900 ease-in-out hover:scale-150 "
-                height={200}
-                width={250}
-                alt="maps"
-              ></Image>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-medium pt-2 text-neutral-100 px-5">
-                Eshop
-              </span>
+      {/* Projects */}
+      <div className="py-6 border rounded-2xl text-neutral-400 border-neutral-600 w-full">
+        <p className="text-neutral-400 font-medium ml-5 sm:ml-10">Projects</p>
+        <hr className="mx-5 sm:mx-10 my-2 h-px bg-neutral-300 border-0" />
 
-              <div className="flex mx-4 gap-3 pt-2">
-                <a
-                  href="https://ecommerce-electronics-ndj3.vercel.app/" // replace with your actual URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsGlobe
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-                {/* https://github.com/Nitin01172005/Ecommerce-electronics */}
-                <a
-                  href="https://github.com/Nitin01172005/Ecommerce-electronics" // replace with your actual URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
+        <div className="flex flex-col lg:flex-row gap-6 px-5 sm:px-10">
+          {[
+            {
+              title: "Eshop",
+              image: "/elect.png",
+              description:
+                "An e-commerce electronic website where you can purchase all the goods from headphones, pc, etc.",
+              liveUrl: "https://ecommerce-electronics-ndj3.vercel.app/",
+              githubUrl:
+                "https://github.com/Nitin01172005/Ecommerce-electronics",
+            },
+            {
+              title: "Real Estate",
+              image: "/tour.png",
+              description:
+                "A real estate platform where you can search the property according to your preferences.",
+              liveUrl: "https://touring-site.vercel.app/",
+              githubUrl: "https://github.com/Nitin01172005/Tour",
+            },
+          ].map((project, i) => (
+            <div
+              key={i}
+              className="border bg-neutral-800 border-neutral-600 rounded-xl overflow-hidden flex-1 max-w-full"
+            >
+              <div className="w-full h-[220px] sm:h-[300px] overflow-hidden">
+                <Image
+                  src={project.image}
+                  className="object-cover w-full h-full rounded-t-xl transition-transform duration-900 ease-in-out hover:scale-150"
+                  height={300}
+                  width={500}
+                  alt={project.title}
+                />
+              </div>
+              <div className="flex justify-between items-center px-5 pt-3">
+                <span className="text-lg sm:text-xl font-medium text-neutral-100">
+                  {project.title}
+                </span>
+                <div className="flex gap-3">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsGlobe
+                      className="hover:scale-105 cursor-pointer text-white transition-transform duration-200"
+                      size={20}
+                    />
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub
+                      className="hover:scale-105 cursor-pointer text-white transition-transform duration-200"
+                      size={20}
+                    />
+                  </a>
+                </div>
+              </div>
+              <p className="text-sm text-neutral-300 px-5 py-2">
+                {project.description}
+              </p>
+              <div className="flex gap-2 px-5 pb-4">
+                {["React.js", "Tailwind CSS", "Framer Motion"].map(
+                  (tech, index) => (
+                    <button
+                      key={index}
+                      className="border text-[10px] rounded bg-neutral-600 text-neutral-200 px-2 py-1"
+                    >
+                      {tech}
+                    </button>
+                  )
+                )}
               </div>
             </div>
-            <p className="mt-2 text-[12px] font-medium pt-2 text-neutral-300 pl-5">
-              An e-commerce electronic website where you can purchase all the
-              goods from headhones(wireless, weired), pc, etc.
-            </p>
-            <div className="flex gap-3 ml-5">
-              <button className="  my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                React.js
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Tailwind Css
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Framer Motion
-              </button>
-            </div>
-          </div>
-          <div className=" overflow-hidden border h-[430px] w-[500px]  bg-neutral-800 border-neutral-600 rounded-xl ">
-            <div className=" overflow-hidden w-[500px] h-[300px]">
-              <Image
-                src="/tour.png"
-                className="z-10 object-cover w-full h-full  rounded-tl-xl rounded-tr-xl transition-transform duration-900 ease-in-out hover:scale-150 "
-                height={200}
-                width={250}
-                alt="maps"
-              ></Image>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-medium pt-2 text-neutral-100 px-5">
-                Real Estate
-              </span>
-
-              <div className="flex mx-4 gap-3 pt-2">
-                <a
-                  href="https://touring-site.vercel.app/" // replace with your actual URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsGlobe
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-                <a
-                  href="https://github.com/Nitin01172005/Tour" // replace with your GitHub URL
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-              </div>
-            </div>
-            <p className="mt-2 text-[12px] font-medium pt-2 text-neutral-300 pl-5">
-              A real estate platform where you can search the property according
-              to you preferences.
-            </p>
-            <div className="flex gap-3 ml-5">
-              <button className="  my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                React.js
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Tailwind Css
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Framer Motion
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className="flex items-center justify-center">
+
+        {/* More Projects Button */}
+        <div className="flex items-center justify-center mt-4">
           <button
             onClick={() => router.push("/projects")}
-            className=" cursor-pointer flex items-center my-3  border rounded-xl font-medium gap-2 bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[12px]"
+            className="cursor-pointer flex items-center border rounded-xl font-medium gap-2 bg-neutral-600 text-neutral-200 px-4 py-2 text-sm"
           >
             more projects
-            <MdOutlineDoubleArrow className="font-bold text-white " size={20} />
+            <MdOutlineDoubleArrow className="text-white" size={20} />
           </button>
         </div>
       </div>
     </div>
   );
 };
+
 
 
 

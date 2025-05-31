@@ -11,204 +11,52 @@ import { BsGlobe } from "react-icons/bs";
 
 const page = () => {
   return (
-    <div className="pt-48">
-      <div className=" mt-13 py-4 border mr-15 rounded-2xl  text-neutral-400 border-neutral-600">
-        <p className="text-neutral-400 ml-10 font-medium">Projects</p>
+    <div className="pt-48 px-4">
+      <div className="mt-13 py-4 border rounded-2xl text-neutral-400 border-neutral-600">
+        <p className="text-neutral-400 px-6 font-medium text-lg">Projects</p>
 
-        <hr className="mx-4 h-px bg-neutral-300 border-0 z-10 ml-10 my-2 mr-4" />
+        <hr className="mx-4 h-px bg-neutral-300 border-0 z-10 my-2" />
 
+        {/* First Row (Eshop & Real Estate) */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.98,
-            filter: "blur(10px)",
-          }}
+          initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{
-            duration: 0.3,
-            delay: 0.05,
-          }}
-          className="flex gap-15 items-center justify-between mx-10 my-4"
+          transition={{ duration: 0.3, delay: 0.05 }}
+          className="flex flex-col md:flex-row flex-wrap gap-6 justify-center px-4 py-4"
         >
-          <div className=" overflow-hidden border h-[430px] w-[500px]  bg-neutral-800 border-neutral-600 rounded-xl ">
-            <div className=" overflow-hidden w-[500px] h-[300px]">
-              <Image
-                src="/elect.png"
-                className="z-10 object-cover w-full h-full  rounded-tl-xl rounded-tr-xl transition-transform duration-900 ease-in-out hover:scale-150 "
-                height={200}
-                width={250}
-                alt="maps"
-              ></Image>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-medium pt-2 text-neutral-100 px-5">
-                Eshop
-              </span>
+          {/* Project Card 1 */}
+          <ProjectCard
+            title="Eshop"
+            image="/elect.png"
+            liveLink="https://ecommerce-electronics-ndj3.vercel.app/"
+            codeLink="https://github.com/Nitin01172005/Ecommerce-electronics"
+            description="An e-commerce electronic website where you can purchase all the goods from headphones (wireless, wired), PCs, etc."
+          />
 
-              <div className="flex mx-4 gap-3 pt-2">
-                <a
-                  href="https://ecommerce-electronics-ndj3.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsGlobe
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-                {/* https://github.com/Nitin01172005/Ecommerce-electronics */}
-                <a
-                  href="https://github.com/Nitin01172005/Ecommerce-electronics"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-              </div>
-            </div>
-            <p className="mt-2 text-[12px] font-medium pt-2 text-neutral-300 pl-5">
-              An e-commerce electronic website where you can purchase all the
-              goods from headhones(wireless, weired), pc, etc.
-            </p>
-            <div className="flex gap-3 ml-5">
-              <button className="  my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                React.js
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Tailwind Css
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Framer Motion
-              </button>
-            </div>
-          </div>
-          <div className=" overflow-hidden border h-[430px] w-[500px]  bg-neutral-800 border-neutral-600 rounded-xl ">
-            <div className=" overflow-hidden w-[500px] h-[300px]">
-              <Image
-                src="/tour.png"
-                className="z-10 object-cover w-full h-full  rounded-tl-xl rounded-tr-xl transition-transform duration-900 ease-in-out hover:scale-150 "
-                height={200}
-                width={250}
-                alt="maps"
-              ></Image>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-medium pt-2 text-neutral-100 px-5">
-                Real Estate
-              </span>
-
-              <div className="flex mx-4 gap-3 pt-2">
-                <a
-                  href="https://touring-site.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsGlobe
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-                <a
-                  href="https://github.com/Nitin01172005/Tour"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-              </div>
-            </div>
-            <p className="mt-2 text-[12px] font-medium pt-2 text-neutral-300 pl-5">
-              A real estate platform where you can search the property according
-              to you preferences.
-            </p>
-            <div className="flex gap-3 ml-5">
-              <button className="  my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                React.js
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Tailwind Css
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Framer Motion
-              </button>
-            </div>
-          </div>
+          {/* Project Card 2 */}
+          <ProjectCard
+            title="Real Estate"
+            image="/tour.png"
+            liveLink="https://touring-site.vercel.app/"
+            codeLink="https://github.com/Nitin01172005/Tour"
+            description="A real estate platform where you can search the property according to your preferences."
+          />
         </motion.div>
 
+        {/* Second Row (Bitcoin & Saas) */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.98,
-            filter: "blur(10px)",
-          }}
+          initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{
-            duration: 0.5,
-            delay: 0.3,
-          }}
-          className="flex items-center justify-center mx-auto my-4"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex justify-center px-4 py-4"
         >
-          <div className=" overflow-hidden border h-[430px] w-[500px]  bg-neutral-800 border-neutral-600 rounded-xl ">
-            <div className=" overflow-hidden w-[500px] h-[300px]">
-              <Image
-                src="/bitcoin.png"
-                className="z-10 object-cover w-full h-full  rounded-tl-xl rounded-tr-xl transition-transform duration-900 ease-in-out hover:scale-150 "
-                height={200}
-                width={250}
-                alt="maps"
-              ></Image>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-medium pt-2 text-neutral-100 px-5">
-                Bitcon & Saas
-              </span>
-
-              <div className="flex mx-4 gap-3 pt-2">
-                <a
-                  href="https://bitcoin-8yfa.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BsGlobe
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-                <a
-                  href="https://github.com/Nitin01172005/Bitcoin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub
-                    className="transition-transform font-bold text-white duration-200 ease-in-out hover:scale-105 cursor-pointer"
-                    size={20}
-                  />
-                </a>
-              </div>
-            </div>
-            <p className="mt-2 text-[12px] font-medium pt-2 text-neutral-300 pl-5">
-              A simple UI for mastering Bitcoin trading with expert-led,
-              strategic coaching that delivers actionable, profitable, reliable,
-              and empowering market insights.
-            </p>
-            <div className="flex gap-3 ml-5">
-              <button className="  my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                React.js
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Tailwind Css
-              </button>
-              <button className=" my-3  border rounded bg-neutral-600 text-neutral-200 px-2 border-neutral-600 text-[10px]">
-                Framer Motion
-              </button>
-            </div>
-          </div>
+          <ProjectCard
+            title="Bitcoin & Saas"
+            image="/bitcoin.png"
+            liveLink="https://bitcoin-8yfa.vercel.app/"
+            codeLink="https://github.com/Nitin01172005/Bitcoin"
+            description="A simple UI for mastering Bitcoin trading with expert-led, strategic coaching that delivers actionable, profitable, reliable, and empowering market insights."
+          />
         </motion.div>
       </div>
     </div>
@@ -216,3 +64,56 @@ const page = () => {
 };
 
 export default page;
+
+// ProjectCard Component
+const ProjectCard = ({ title, image, liveLink, codeLink, description }) => {
+  return (
+    <div className="w-full md:w-[48%] lg:w-[32%] bg-neutral-800 border border-neutral-600 rounded-xl overflow-hidden flex flex-col h-auto">
+      <div className="relative h-[220px] sm:h-[280px] md:h-[300px] w-full">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover rounded-t-xl transition-transform duration-900 ease-in-out hover:scale-150"
+        />
+      </div>
+
+      <div className="flex justify-between items-center px-5 pt-3">
+        <span className="text-xl font-medium text-neutral-100">{title}</span>
+        <div className="flex gap-3">
+          <a href={liveLink} target="_blank" rel="noopener noreferrer">
+            <BsGlobe
+              className="text-white hover:scale-105 transition-transform"
+              size={20}
+            />
+          </a>
+          <a href={codeLink} target="_blank" rel="noopener noreferrer">
+            <FaGithub
+              className="text-white hover:scale-105 transition-transform"
+              size={20}
+            />
+          </a>
+        </div>
+      </div>
+
+      <p className="text-[12px] font-medium text-neutral-300 px-5 pt-2">
+        {description}
+      </p>
+
+      <div className="flex gap-2 flex-wrap px-5 py-3">
+        <Badge>React.js</Badge>
+        <Badge>Tailwind CSS</Badge>
+        <Badge>Framer Motion</Badge>
+      </div>
+    </div>
+  );
+};
+
+const Badge = ({ children }) => (
+  <span className="text-[10px] border rounded bg-neutral-600 text-neutral-200 px-2 py-0.5 border-neutral-600">
+    {children}
+  </span>
+);
+
+
+
